@@ -30,6 +30,44 @@ function greet(){ user = prompt("Please enter your name");
     alert("Hello " + user + " Have a nice day!");
     return user;
 }
+//question 4
+var el = document.getElementById('table1');
+var table = ()=>{
+    let num = +prompt("Enter your number for table:")
+    for(let i =1; i <= 10; i++)
+    el.innerHTML += num + " X " + i +" = "+ (num*i) + "<br>";
+};
+
+//question 5
+let calc = ()=>{
+
+let subj1 = prompt("Enter subject 1 Name:");
+let subj2 = prompt("Enter subject 2 Name:");
+let subj3 = prompt("Enter subject 3 Name:");
+let totalMarks = 100;
+let obtMarkSubj1 = +prompt("Obtained marks in " + subj1);
+let obtMarkSubj2 = +prompt("Obtained marks in " + subj2);
+let obtMarkSubj3 = +prompt("Obtained marks in " + subj3);
 
 
 
+let result1 = (obtMarkSubj1/totalMarks)*100;
+let result2 = (obtMarkSubj2/totalMarks)*100;
+let result3 = (obtMarkSubj3/totalMarks)*100;
+
+document.getElementById('sub1').innerHTML= subj1;
+document.getElementById('sub2').innerHTML= subj2;
+document.getElementById('sub3').innerHTML= subj3;
+
+document.getElementsByClassName('tMarks')[0].innerHTML= totalMarks;
+document.getElementsByClassName('tMarks')[1].innerHTML= totalMarks;
+document.getElementsByClassName('tMarks')[2].innerHTML= totalMarks;
+
+document.getElementById('oMarks1').innerHTML= obtMarkSubj1;
+document.getElementById('oMarks2').innerHTML= obtMarkSubj2;
+document.getElementById('oMarks3').innerHTML= obtMarkSubj3; 
+
+document.getElementById('percentage1').innerHTML= result1 + "%";
+document.getElementById('percentage2').innerHTML= result2 + "%";
+document.getElementById('percentage3').innerHTML= result3 + "%";
+}
